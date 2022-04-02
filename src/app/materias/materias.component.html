@@ -1,0 +1,31 @@
+<h2>Disciplinas</h2>
+<h2>Materias</h2>
+<div>
+  <label for="materia">Disciplina</label><br />
+  <input #nome id="materia" type="text" /><br />
+  <label for="dia">Dia</label><br />
+  <input #dia type="text" id="dia" /><br />
+  <label for="hora">Horário</label><br />
+  <input #hora type="text" id="hora" /><br />
+  <button (click)="materia.add(nome.value, dia.value, hora.value)">
+    Adicionar
+  </button>
+</div>
+<hr />
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Matéria</th>
+      <th scope="col">Dia</th>
+      <th scope="col">Horário</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of materia.getLista(); index as i">
+      <td>{{ item.materia }}</td>
+      <td>{{ item.dia }}</td>
+      <td>{{ item.hora }}</td>
+      <td><button (click)="materia.remove(i)">X</button></td>
+    </tr>
+  </tbody>
+</table>
