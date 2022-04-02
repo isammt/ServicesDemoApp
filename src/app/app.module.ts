@@ -10,26 +10,22 @@ import { LogComponent } from './log/log.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports:      [ 
-    BrowserModule, 
+  imports: [
+    BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      [
-        {path:'',component: HelloComponent},
-          {path:'tasks',component: TasksComponent},
-          {path:'log', component: LogComponent,}
-
-      ]
-
-    )
-   ],
-  declarations: [ 
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'tasks', component: TasksComponent },
+      { path: 'log', component: LogComponent },
+    ]),
+  ],
+  declarations: [
     AppComponent,
     HelloComponent,
     HomeComponent,
     TasksComponent,
-    LogComponent
-   ],
-  bootstrap:    [ AppComponent ]
+    LogComponent,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
