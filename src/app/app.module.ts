@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { LogComponent } from './log/log.component';
 import { RouterModule } from '@angular/router';
-import { TimerService } from 'src/timer.service';
+import { TimerService } from './timer.service';
 
 @NgModule({
   imports: [
