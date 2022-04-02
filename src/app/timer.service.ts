@@ -7,7 +7,7 @@ export class TimerService {
 
   constructor() {}
 
-  start(ns: number) {
+  start(ns: any) {
     if (!this.timer) {
       this.timer = setInterval(() => {
         this.counter++;
