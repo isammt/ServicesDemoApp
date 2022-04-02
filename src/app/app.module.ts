@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { TimerService } from './timer.service';
 import { MateriasComponent } from './materias/materias.component';
 import { ContadorComponent } from './contador/contador.component';
+import { MateriasService } from './materias.service';
 
 @NgModule({
   imports: [
@@ -28,6 +29,6 @@ import { ContadorComponent } from './contador/contador.component';
     ContadorComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [TimerService],
+  providers: [TimerService, MateriasService],
 })
 export class AppModule {}
